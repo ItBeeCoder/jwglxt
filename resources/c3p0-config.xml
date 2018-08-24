@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <c3p0-config>  
+        <default-config>  
+        	<!-- 数据库的url -->
+            <property name="jdbcUrl">jdbc:mysql://localhost:3306/dbtest</property>
+            
+            <!-- 数据库驱动 -->
+            <property name="driverClass">com.mysql.jdbc.Driver</property>
+            
+            <!-- 用户名 -->  
+            <property name="user">root</property>
+            
+            <!-- 密码 -->  
+           	<property name="password">1234abcd</property>
+      
+      		<!-- 当连接池连接耗尽时，客户端调用getConnection()后等待获取新连接的时间，超时将抛出SQLException
+      		若设为0将无线等待，单位毫秒，默认0 -->
+            <property name="checkoutTimeout">30000</property>
+            
+            <!-- 每多少秒检查所有连接池中的空闲连接，默认值0，不检查 -->  
+            <property name="idleConnectionTestPeriod">300</property>
+            
+            <!-- 初始化连接池中的连接数 -->  
+            <property name="initialPoolSize">10</property>
+            
+            <!-- 最大空闲时间，超过300s不用则连接被丢弃，若为0则永不丢弃 -->  
+            <property name="maxIdleTime">300</property>  
+            
+            <!-- 连接池中保留的最大连接数 -->
+            <property name="maxPoolSize">20</property>
+            
+            <!-- 连接池中保留的最小连接数 -->  
+            <property name="minPoolSize">5</property>
+            
+            <!-- 用于控制数据源内加载的PreparedStatements数量 -->  
+            <property name="maxStatements">200</property>  
+        </default-config>  
+    </c3p0-config> 
